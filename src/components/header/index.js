@@ -1,19 +1,17 @@
 import React from 'react'
+import styled from 'styled-components'
 
-import TestComponent from '../../components/test'
 import NavBar from '../navBar'
 
 const Header = () => {
   return (
-    <div>
-      <header>
-        <NavBar></NavBar>
-        <TestComponent text='Voici un texte'></TestComponent>
-      </header>
-    </div>
+    <StyledHeader>
+      <NavBar></NavBar>
+    </StyledHeader>
   )
 }
 
 Header.propTypes = {}
 
+const StyledHeader = styled.header``
 export default Header
