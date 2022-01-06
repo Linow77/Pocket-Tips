@@ -3,7 +3,7 @@ import React from 'react'
 const Installation = () => {
   return (
     <div>
-      <p>Installation</p>
+      <h1>Installation</h1>
     </div>
   )
 }
