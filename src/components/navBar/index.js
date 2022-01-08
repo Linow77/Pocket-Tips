@@ -3,10 +3,12 @@ import MyLink from '../myLink'
 import styled from 'styled-components'
 import Logo from '../logo'
 
+import ImageLogo from '../../assets/logoBlanc.png'
+
 const NavBar = () => {
   return (
     <StyledNav>
-      <Logo type='Header'></Logo>
+      <Logo type='Header' src={ImageLogo}></Logo>
       <LinkContainer>
         <MyLink type='NavBar' to='/'>
           Home
