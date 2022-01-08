@@ -5,14 +5,10 @@ import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 import styled from 'styled-components'
 
 const CodeArea = props => {
-  const { codeString } = props
+  const { codeString, language } = props
   return (
     <StyledCodeArea>
-      <SyntaxHighlighter
-        language='javascript'
-        style={docco}
-        wrapLongLines={true}
-      >
+      <SyntaxHighlighter language={language} style={docco} wrapLongLines={true}>
         {codeString}
       </SyntaxHighlighter>
     </StyledCodeArea>
@@ -20,7 +16,8 @@ const CodeArea = props => {
 }
 
 CodeArea.propTypes = {
-  codeString: PropTypes.string.isRequired
+  codeString: PropTypes.string.isRequired,
+  language: PropTypes.string.isRequired
 }
 
 const StyledCodeArea = styled.div``

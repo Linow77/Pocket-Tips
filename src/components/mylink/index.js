@@ -15,7 +15,7 @@ const SwitchMyLink = (type, to, children) => {
       return <NavBarLink to={to}>{children}</NavBarLink>
 
     default:
-      return <BasedLink to={to}>{children}</BasedLink>
+      return <BaseLink to={to}>{children}</BaseLink>
   }
 }
 
@@ -27,12 +27,12 @@ MyLink.propTypes = {
   ]).isRequired
 }
 
-const BasedLink = styled(Link)`
+const BaseLink = styled(Link)`
   text-decoration: none;
   color: white;
 `
 
-const NavBarLink = styled(BasedLink)`
+const NavBarLink = styled(BaseLink)`
   margin: 1rem;
   :hover {
     text-shadow: 1px 0 0 white;
