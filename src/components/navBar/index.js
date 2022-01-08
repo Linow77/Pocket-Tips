@@ -1,5 +1,5 @@
 import React from 'react'
-import MyLink from '../mylink'
+import MyLink from '../myLink'
 import styled from 'styled-components'
 import Logo from '../logo'
 
@@ -31,7 +31,7 @@ const StyledNav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #e3dddb;
+  background-color: ${props => props.theme.secondaryColor};
 `
 
 const LinkContainer = styled.div`
