@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 //Components
-import Title from '../../components/Title'
+import Title from '../../components/title'
 import Screen from '../../components/screen'
 import Text from '../../components/text'
 import Section from '../../components/section'
@@ -37,11 +37,37 @@ const Installation = () => {
           />
         </ImageContainer>
         <Text type='Section'>Then, you need to create the project :</Text>
-        <Text type='InlineCode'>npx create-react-app mon-app</Text>
+        <Text type='InlineCode'>npx create-react-app my-app</Text>
         <CodeArea
           language='powershell'
           codeString='npx create-react-app mon-app'
         />
+        <Text type='Section'>
+          Now, you can open your project with VSCode and execute it :
+        </Text>
+        <CodeArea language='powershell' codeString='cd my-app' />
+        <CodeArea language='powershell' codeString='npm start' />
+        <Text type='Section'>
+          Thanks to VSCode, we can use extension that can increase our
+          productivity and help us while programming. Here are those I
+          personnaly use:
+          <br />
+          Auto Rename Tag : Allow us to modify simultaneously opening and
+          closing name of an HTML Tag
+          <br />
+          Better comments : Allow specific colorization in comments
+          <br />
+          Brackets pair colorizer : Colorize by pair each Brackets
+          <br />
+          Prettier : Format for our files
+          <br />
+          Eslint : Check for any erros in files
+          <br />
+          Reactjs code snippets : Snippets for React functions
+          <br />
+          vscode-styled-components : For those who whill use styled-components,
+          you will need this extension (Explication later)
+        </Text>
       </Section>
     </Screen>
   )
