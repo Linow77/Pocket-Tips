@@ -7,11 +7,13 @@ import styled from 'styled-components'
 const CodeArea = props => {
   const { codeString, language } = props
   return (
-    <StyledCodeArea>
-      <SyntaxHighlighter language={language} style={docco} wrapLongLines={true}>
-        {codeString}
-      </SyntaxHighlighter>
-    </StyledCodeArea>
+    <StyledSyntaxHighlighter
+      language={language}
+      style={docco}
+      wrapLongLines={true}
+    >
+      {codeString}
+    </StyledSyntaxHighlighter>
   )
 }
 
@@ -20,6 +22,11 @@ CodeArea.propTypes = {
   language: PropTypes.string.isRequired
 }
 
-const StyledCodeArea = styled.div``
-
+const StyledSyntaxHighlighter = styled(SyntaxHighlighter)`
+  margin: 1rem 0;
+  border: 1px solid black;
+  border-radius: 0.25rem;
+  max-width: 50rem;
+  text-align: left;
+`
 export default CodeArea
