@@ -33,7 +33,7 @@ const StyledNav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: ${props => props.theme.secondaryColor};
+  background-color: ${props => props.theme.primaryBackgroundColor};
 `
 
 const LinkContainer = styled.div`

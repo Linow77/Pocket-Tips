@@ -1,9 +1,9 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import Basics from '../screens/basics'
-import Home from '../screens/home'
-import Installation from '../screens/installation'
-import NotFound from '../screens/notFound'
+import Basics from '../../screens/basics'
+import Home from '../../screens/home'
+import Installation from '../../screens/installation'
+import NotFound from '../../screens/notFound'
 
 const Router = () => {
   return (

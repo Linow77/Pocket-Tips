@@ -16,6 +16,14 @@ Screen.propTypes = {
 
 const StyledScreen = styled.div`
   margin: 1rem;
+
+  //extra large screen
+  @media ${props => props.theme.device.xlarge} {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `
 
 export default Screen
