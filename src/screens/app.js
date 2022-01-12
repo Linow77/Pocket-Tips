@@ -1,4 +1,5 @@
 import Header from '../components/header'
+import Footer from '../components/footer'
 import './app.css'
 
 //Manage Routes
@@ -14,6 +15,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <Header></Header>
         <Router></Router>
+        <Footer></Footer>
       </ThemeProvider>
     </div>
   )

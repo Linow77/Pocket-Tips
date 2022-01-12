@@ -15,7 +15,7 @@ Screen.propTypes = {
 }
 
 const StyledScreen = styled.div`
-  margin: 0 1rem;
+  margin: 1rem;
 `
 
 export default Screen

@@ -6,26 +6,39 @@ import { useNavigate } from 'react-router-dom'
 //Logo Files
 
 const Logo = props => {
-  const { type, src, width, url } = props
+  const { type, src, width, url, clickable } = props
+  console.log(props.clickable)
 
-  return SwitchLogo(type, src, width, url)
+  return SwitchLogo(type, src, width, url, clickable)
 }
 
-const SwitchLogo = (type, src, width, url) => {
+const SwitchLogo = (type, src, width, url, clickable) => {
   const Navigate = useNavigate()
   switch (type) {
     case 'Header':
-      return <HeaderLogo src={src} onClick={() => Navigate('/')} />
+      return (
+        <HeaderLogo
+          src={src}
+          onClick={() => Navigate('/')}
+          clickable={clickable}
+        />
+      )
 
-    case 'Clickable':
+    case 'Basic':
+      return <ResizeLogo src={src} width={width} />
+
+    case 'Redirect':
       return (
         <a href={url}>
-          <SectionLogo src={src} width={width} />
+          <ResizeLogo src={src} width={width} />
         </a>
       )
 
+    case 'WithLegend':
+      return <WithLegendLogo src={src} width={width} />
+
     default:
-      return <BasedLogo src={src} />
+      return <BasedLogo src={src} clickable={clickable} />
   }
 }
 
@@ -39,18 +52,21 @@ Logo.propTypes = {
 const BasedLogo = styled.img`
   height: 300px;
   width: auto;
+  cursor: ${props => (props.clickable ? 'pointer' : 'unset')};
 `
 
 const HeaderLogo = styled(BasedLogo)`
   height: 2.5rem;
   width: auto;
   margin: 0.25rem;
-  cursor: pointer;
 `
-const SectionLogo = styled(BasedLogo)`
+const ResizeLogo = styled(BasedLogo)`
   width: ${props => props.width};
   height: auto;
-  cursor: pointer;
+`
+
+const WithLegendLogo = styled(ResizeLogo)`
+  margin-right: 0.5rem;
 `
 
 export default Logo

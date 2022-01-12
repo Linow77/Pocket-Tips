@@ -8,7 +8,7 @@ import ImageLogo from '../../assets/logoBlanc.png'
 const NavBar = () => {
   return (
     <StyledNav>
-      <Logo type='Header' src={ImageLogo}></Logo>
+      <Logo type='Header' src={ImageLogo} clickable={true}></Logo>
       <LinkContainer>
         <MyLink type='NavBar' to='/'>
           Home
@@ -16,8 +16,8 @@ const NavBar = () => {
         <MyLink type='NavBar' to='/installation'>
           Installation
         </MyLink>
-        <MyLink type='NavBar' to='/installation'>
-          Page3
+        <MyLink type='NavBar' to='/basics'>
+          Basics
         </MyLink>
         <MyLink type='NavBar' to='/installation'>
           Page4
