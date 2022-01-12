@@ -15,7 +15,7 @@ const Header = () => {
 
 Header.propTypes = {}
 
-const HeaderContainer = styled.div`
+const HeaderContainer = styled.header`
   @media ${props => props.theme.device.xlarge} {
     display: flex;
     flex-direction: column;
@@ -25,7 +25,7 @@ const HeaderContainer = styled.div`
   background-color: ${props => props.theme.primaryBackgroundColor};
 `
 
-const StyledHeader = styled.header`
+const StyledHeader = styled.div`
   margin: 0 1rem;
   @media ${props => props.theme.device.xlarge} {
     min-width: 1200px;
