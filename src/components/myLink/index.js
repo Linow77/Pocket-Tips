@@ -33,7 +33,7 @@ const BaseLink = styled(Link)`
 `
 
 const NavBarLink = styled(BaseLink)`
-  margin: 1rem;
+  margin-left: 1rem;
   :hover {
     text-shadow: 1px 0 0 white;
   }

@@ -26,7 +26,6 @@ const StyledSyntaxHighlighter = styled(SyntaxHighlighter)`
   margin: 1rem 0;
   border: 1px solid black;
   border-radius: 0.25rem;
-  max-width: 50rem;
   text-align: left;
 `
 export default CodeArea

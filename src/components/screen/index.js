@@ -4,7 +4,11 @@ import styled from 'styled-components'
 
 const Screen = props => {
   const { children } = props
-  return <StyledScreen>{children}</StyledScreen>
+  return (
+    <ScreenContainer>
+      <StyledScreen>{children}</StyledScreen>
+    </ScreenContainer>
+  )
 }
 
 Screen.propTypes = {
@@ -14,15 +18,20 @@ Screen.propTypes = {
   ]).isRequired
 }
 
-const StyledScreen = styled.div`
-  margin: 1rem;
-
-  //extra large screen
+const ScreenContainer = styled.div`
   @media ${props => props.theme.device.xlarge} {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+`
+
+const StyledScreen = styled.div`
+  margin: 1rem;
+  @media ${props => props.theme.device.xlarge} {
+    min-width: 1200px;
+    margin: 1rem 0;
   }
 `
 

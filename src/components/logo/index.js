@@ -58,7 +58,7 @@ const BasedLogo = styled.img`
 const HeaderLogo = styled(BasedLogo)`
   height: 2.5rem;
   width: auto;
-  margin: 0.25rem;
+  margin: 0.3rem 0;
 `
 const ResizeLogo = styled(BasedLogo)`
   width: ${props => props.width};
