@@ -20,76 +20,9 @@ import ReactLogo from '../../assets/reactLogo.png'
 import styledComponentsLogo from '../../assets/styledComponentLogo.png'
 
 //Code Files
-// import * as data from '../../code/installation/settings.json'
+import { settingsCode, prettierCode, eslintCode } from '../../code/installation'
 
 const Installation = () => {
-  const code = `{
-    // does not render single space between words
-    "editor.renderWhitespace": "boundary",
-    // vertical rule after 80 charachter
-    "editor.rulers": [80],
-    // turns off validations that VSCode
-    "javascript.validate.enable": false,
-    // tab = 2 spaces
-    "editor.tabSize": 2,
-    // allow prettier to fix eslint 
-    // "eslint.autoFixOnSave": true,
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
-    }
-  }`
-
-  const code2 = `{
-    "arrowParens": "avoid",
-    "bracketSpacing": true,
-    "endOfLine": "auto",
-    "htmlWhitespaceSensitivity": "css",
-    "insertPragma": false,
-    "jsxBracketSameLine": false,
-    "jsxSingleQuote": true,
-    "printWidth": 80,
-    "proseWrap": "preserve",
-    "quoteProps": "as-needed",
-    "semi": false,
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "none",
-    "useTabs": false,
-    "parser": "babel"
-  }`
-
-  const code3 = `{
-    "parser": "babel-eslint",
-    "plugins": ["prettier"],
-    "extends": ["eslint:recommended", "plugin:react/recommended", "prettier"],
-    "env": { "browser": true, "node": true, "jest": true },
-    "rules": {
-      "prettier/prettier": ["warn"],    
-      "no-unused-vars": 1,
-      "react/react-in-jsx-scope": 0,
-      "react/display-name": 1,
-      "react/jsx-key": 1,
-      "react/jsx-no-comment-textnodes": 1,
-      "react/jsx-no-duplicate-props": 1,
-      "react/jsx-no-target-blank": 1,
-      "react/jsx-no-undef": 1,
-      "react/jsx-uses-react": 1,
-      "react/jsx-uses-vars": 1,
-      "react/no-children-prop": 1,
-      "react/no-danger-with-children": 1,
-      "react/no-deprecated": 1,
-      "react/no-direct-mutation-state": 1,
-      "react/no-find-dom-node": 1,
-      "react/no-is-mounted": 1,
-      "react/no-render-return-value": 1,
-      "react/no-string-refs": 1,
-      "react/no-unescaped-entities": 1,
-      "react/no-unknown-property": 1,
-      "react/prop-types": 1,
-      "react/require-render-return": 1
-    }
-  }`
-
   return (
     <Screen>
       <Title type='Page'>Install tools and init the project</Title>
@@ -113,7 +46,6 @@ const Installation = () => {
           />
         </ImageContainer>
         <Text type='Section'>Then, you need to create the project :</Text>
-        <Text type='InlineCode'>npx create-react-app my-app</Text>
         <CodeArea
           language='powershell'
           codeString='npx create-react-app mon-app'
@@ -123,6 +55,11 @@ const Installation = () => {
         </Text>
         <CodeArea language='powershell' codeString='cd my-app' />
         <CodeArea language='powershell' codeString='npm start' />
+        <Text type='Section'>You should also install somes packages :</Text>
+        <CodeArea
+          language='powershell'
+          codeString='npm i babel-eslint prettier-eslint eslint-config-prettier eslint-plugin-prettier eslint-plugin-react --save-dev'
+        />
         <Text type='Section'>
           Thanks to VSCode, we can use extension that can increase our
           productivity and help us while programming. Here are those I
@@ -175,13 +112,13 @@ const Installation = () => {
           First, create a folder named .vscode and create a file named
           settings.json :
         </Text>
-        <CodeArea language='json' codeString={code} />
+        <CodeArea language='json' codeString={settingsCode} />
         <Text type='Section'>Then, create a file named .prettierrc : </Text>
-        <CodeArea language='json' codeString={code2} />
+        <CodeArea language='json' codeString={prettierCode} />
         <Text type='Section'>
           Finally, create a file named .eslintrc.json :
         </Text>
-        <CodeArea language='json' codeString={code3} />
+        <CodeArea language='json' codeString={eslintCode} />
         <Text type='Section'>
           You are now ready to create your website with React.
         </Text>

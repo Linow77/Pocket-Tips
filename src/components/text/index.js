@@ -13,13 +13,6 @@ const SwitchText = (type, children) => {
     case 'Section':
       return <SectionText>{children}</SectionText>
 
-    case 'InlineCode':
-      return (
-        <InlineContainer>
-          <CodeText>{children}</CodeText>
-        </InlineContainer>
-      )
-
     default:
       return <BaseText>{children}</BaseText>
   }
@@ -40,16 +33,6 @@ const BaseText = styled.p`
 
 const SectionText = styled(BaseText)`
   font-size: 1rem;
-`
-
-const InlineContainer = styled.div`
-  padding: 0.25rem;
-  background-color: lightgray;
-  width: fit-content;
-`
-
-const CodeText = styled(BaseText)`
-  color: black;
 `
 
 export default Text
