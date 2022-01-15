@@ -32,6 +32,7 @@ const BaseTitle = styled.h1`
 
 const PageTitle = styled(BaseTitle)`
   font-size: 2rem;
+  font-weight: 600;
 `
 
 export default Title

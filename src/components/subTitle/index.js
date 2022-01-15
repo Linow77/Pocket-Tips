@@ -21,10 +21,12 @@ const SwitchSubTitle = (type, children) => {
 const BaseSubTitle = styled.h2`
   text-align: left;
   margin: 0;
+  color: ${props => props.theme.primaryBackgroundColor};
 `
 
 const PageSubTitle = styled(BaseSubTitle)`
   font-size: 1.5rem;
+  font-weight: 500;
 `
 
 SubTitle.propTypes = {
