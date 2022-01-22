@@ -74,7 +74,7 @@ const WithLegendLogo = styled(ResizeLogo)`
 
 const MoveLogo = styled(WithLegendLogo)`
   transform: ${({ move }) => (move ? 'rotate(90deg)' : '')};
-  transition: transform 0.7s ease;
+  transition: transform 0.5s ease;
 `
 
 export default Logo

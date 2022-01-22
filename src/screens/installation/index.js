@@ -5,7 +5,6 @@ import styled from 'styled-components'
 import Title from '../../components/title'
 import Screen from '../../components/screen'
 import Text from '../../components/text'
-import Section from '../../components/section'
 import Logo from '../../components/logo'
 import CodeArea from '../../components/codeArea'
 import SubTitle from '../../components/subTitle'
@@ -19,7 +18,7 @@ import Prettier from '../../assets/prettierLogo.png'
 import Eslint from '../../assets/eslintLogo.png'
 import ReactLogo from '../../assets/reactLogo.png'
 import styledComponentsLogo from '../../assets/styledComponentLogo.png'
-
+import Collapsible from '../../components/collapsible'
 //Code Files
 import { settingsCode, prettierCode, eslintCode } from '../../code/installation'
 
@@ -27,35 +26,34 @@ const Installation = () => {
   return (
     <Screen>
       <Title type='Page'>Install tools and init the project</Title>
-      <Section>
-        <SubTitle type='Page'>Install NodeJs and VSCode</SubTitle>
-        <ImageContainer>
-          <Logo type='WithLegend' src={NodeJs} width='2.5rem' />
-          <Text type='Section'>
-            <b>NodeJs :</b> Allow to build scalable applications
-          </Text>
-        </ImageContainer>
-        <ImageContainer>
-          <Logo type='WithLegend' src={VSCode} width='2.5rem' />
-          <Text type='Section'>
-            <b>VSCode :</b> Code Editor with extensions
-          </Text>
-        </ImageContainer>
+      <SubTitle type='Page'>Install NodeJs and VSCode</SubTitle>
+      <ImageContainer>
+        <Logo type='WithLegend' src={NodeJs} width='2.5rem' />
+        <Text type='Section'>
+          <b>NodeJs :</b> Allow to build scalable applications
+        </Text>
+      </ImageContainer>
+      <ImageContainer>
+        <Logo type='WithLegend' src={VSCode} width='2.5rem' />
+        <Text type='Section'>
+          <b>VSCode :</b> Code Editor with extensions
+        </Text>
+      </ImageContainer>
 
-        <SubTitle type='Page'>Create the project</SubTitle>
-        <CodeArea
-          language='powershell'
-          codeString='npx create-react-app mon-app'
-        />
-        <CodeArea language='powershell' codeString='cd my-app' />
-        <CodeArea language='powershell' codeString='npm start' />
-        <Text type='Section'>Installation of packages :</Text>
-        <CodeArea
-          language='powershell'
-          codeString='npm i babel-eslint prettier-eslint eslint-config-prettier eslint-plugin-prettier eslint-plugin-react --save-dev'
-        />
+      <SubTitle type='Page'>Create the project</SubTitle>
+      <CodeArea
+        language='powershell'
+        codeString='npx create-react-app mon-app'
+      />
+      <CodeArea language='powershell' codeString='cd my-app' />
+      <CodeArea language='powershell' codeString='npm start' />
+      <Text type='Section'>Installation of packages :</Text>
+      <CodeArea
+        language='powershell'
+        codeString='npm i babel-eslint prettier-eslint eslint-config-prettier eslint-plugin-prettier eslint-plugin-react --save-dev'
+      />
 
-        <SubTitle type='Page'>VSCode Extension</SubTitle>
+      <Collapsible title='VSCode Extensions'>
         <ImageContainer>
           <Logo type='WithLegend' src={AutoRenameTag} width='2.5rem' />
           <Text type='Section'>
@@ -94,8 +92,9 @@ const Installation = () => {
             styled-components, you will need this extension (Explication later)
           </Text>
         </ImageContainer>
+      </Collapsible>
 
-        <SubTitle type='Page'>Configuration of theses extension</SubTitle>
+      <Collapsible title='Configuration of theses extension'>
         <Text>
           At the root, create a .vscode folder and a settings.json file inside:
         </Text>
@@ -104,7 +103,7 @@ const Installation = () => {
         <CodeArea language='json' codeString={prettierCode} />
         <Text type='Section'>At the root, create a .eslintrc.json file :</Text>
         <CodeArea language='json' codeString={eslintCode} />
-      </Section>
+      </Collapsible>
     </Screen>
   )
 }
