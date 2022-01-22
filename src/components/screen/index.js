@@ -22,9 +22,9 @@ const ScreenContainer = styled.div`
   @media ${props => props.theme.device.xlarge} {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
   }
+  flex: 1;
 `
 
 const StyledScreen = styled.div`

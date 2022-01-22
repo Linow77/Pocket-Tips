@@ -6,13 +6,13 @@ import { useNavigate } from 'react-router-dom'
 //Logo Files
 
 const Logo = props => {
-  const { type, src, width, url, clickable } = props
+  const { type, src, width, url, clickable, move } = props
   console.log(props.clickable)
 
-  return SwitchLogo(type, src, width, url, clickable)
+  return SwitchLogo(type, src, width, url, clickable, move)
 }
 
-const SwitchLogo = (type, src, width, url, clickable) => {
+const SwitchLogo = (type, src, width, url, clickable, move) => {
   const Navigate = useNavigate()
   switch (type) {
     case 'Header':
@@ -36,6 +36,9 @@ const SwitchLogo = (type, src, width, url, clickable) => {
 
     case 'WithLegend':
       return <WithLegendLogo src={src} width={width} />
+
+    case 'Move':
+      return <MoveLogo src={src} width={width} move={move} />
 
     default:
       return <BasedLogo src={src} clickable={clickable} />
@@ -67,6 +70,11 @@ const ResizeLogo = styled(BasedLogo)`
 
 const WithLegendLogo = styled(ResizeLogo)`
   margin-right: 0.5rem;
+`
+
+const MoveLogo = styled(WithLegendLogo)`
+  transform: ${({ move }) => (move ? 'rotate(90deg)' : '')};
+  transition: transform 0.7s ease;
 `
 
 export default Logo
