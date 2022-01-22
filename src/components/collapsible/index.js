@@ -44,7 +44,7 @@ const StyledSpan = styled.span`
 `
 
 const CollapsibleBody = styled.div`
-  max-height: ${({ open }) => (open ? '1000px' : '1px')};
+  max-height: ${({ open }) => (open ? '10000px' : '0px')};
   overflow: hidden;
   transition: all 0.7s ease;
 `

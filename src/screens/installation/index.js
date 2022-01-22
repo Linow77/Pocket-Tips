@@ -19,8 +19,11 @@ import Eslint from '../../assets/eslintLogo.png'
 import ReactLogo from '../../assets/reactLogo.png'
 import styledComponentsLogo from '../../assets/styledComponentLogo.png'
 import Collapsible from '../../components/collapsible'
+
 //Code Files
 import { settingsCode, prettierCode, eslintCode } from '../../code/installation'
+
+import reactTree from '../../assets/reactTree.png'
 
 const Installation = () => {
   return (
@@ -95,13 +98,12 @@ const Installation = () => {
       </Collapsible>
 
       <Collapsible title='Configuration of theses extension'>
-        <Text>
-          At the root, create a .vscode folder and a settings.json file inside:
-        </Text>
+        <Logo type='Basic' src={reactTree} width='8rem' />
+        <Text>settings.json:</Text>
         <CodeArea language='json' codeString={settingsCode} />
-        <Text type='Section'>At the root, create a .prettierrc file : </Text>
+        <Text type='Section'>.prettierrc :</Text>
         <CodeArea language='json' codeString={prettierCode} />
-        <Text type='Section'>At the root, create a .eslintrc.json file :</Text>
+        <Text type='Section'>.eslintrc.json :</Text>
         <CodeArea language='json' codeString={eslintCode} />
       </Collapsible>
     </Screen>
