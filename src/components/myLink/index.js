@@ -29,11 +29,12 @@ MyLink.propTypes = {
 
 const BaseLink = styled(Link)`
   text-decoration: none;
-  color: white;
+  color: ${props => props.theme.primaryBackgroundColor};
 `
 
 const NavBarLink = styled(BaseLink)`
   margin-left: 1rem;
+  color: white;
   :hover {
     text-shadow: 1px 0 0 white;
   }

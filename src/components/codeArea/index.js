@@ -23,9 +23,9 @@ CodeArea.propTypes = {
 }
 
 const StyledSyntaxHighlighter = styled(SyntaxHighlighter)`
-  margin: 1rem 0;
   border: 1px solid black;
   border-radius: 0.25rem;
   text-align: left;
+  width: fit-content;
 `
 export default CodeArea

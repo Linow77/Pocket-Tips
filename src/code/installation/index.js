@@ -1,3 +1,7 @@
+export const installCode = `npx create-react-app mon-app
+cd my-app
+npm start`
+
 export const settingsCode = `{
   // does not render single space between words
   "editor.renderWhitespace": "boundary",

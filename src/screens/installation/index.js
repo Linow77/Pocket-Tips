@@ -21,7 +21,12 @@ import styledComponentsLogo from '../../assets/styledComponentLogo.png'
 import Collapsible from '../../components/collapsible'
 
 //Code Files
-import { settingsCode, prettierCode, eslintCode } from '../../code/installation'
+import {
+  settingsCode,
+  prettierCode,
+  eslintCode,
+  installCode
+} from '../../code/installation'
 
 import reactTree from '../../assets/reactTree.png'
 
@@ -44,12 +49,7 @@ const Installation = () => {
       </ImageContainer>
 
       <SubTitle type='Page'>Create the project</SubTitle>
-      <CodeArea
-        language='powershell'
-        codeString='npx create-react-app mon-app'
-      />
-      <CodeArea language='powershell' codeString='cd my-app' />
-      <CodeArea language='powershell' codeString='npm start' />
+      <CodeArea language='powershell' codeString={installCode} />
       <Text type='Section'>Installation of packages :</Text>
       <CodeArea
         language='powershell'
