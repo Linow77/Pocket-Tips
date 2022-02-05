@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Basics from '../../screens/basics'
 import Home from '../../screens/home'
 import Installation from '../../screens/installation'
+import NodeJS from '../../screens/nodeJS'
 import NotFound from '../../screens/notFound'
 
 const Router = () => {
@@ -11,6 +12,7 @@ const Router = () => {
       <Route path='/' element={<Home />} />
       <Route path='/installation' element={<Installation />} />
       <Route path='/basics' element={<Basics />} />
+      <Route path='/nodejs' element={<NodeJS />} />
       <Route path='*' element={<NotFound />} />
     </Routes>
   )

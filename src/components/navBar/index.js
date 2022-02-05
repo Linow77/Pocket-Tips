@@ -19,8 +19,8 @@ const NavBar = () => {
         <MyLink type='NavBar' to='/basics'>
           Basics
         </MyLink>
-        <MyLink type='NavBar' to='/installation'>
-          Page4
+        <MyLink type='NavBar' to='/nodejs'>
+          NodeJS
         </MyLink>
       </LinkContainer>
     </StyledNav>
