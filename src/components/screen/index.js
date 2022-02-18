@@ -30,7 +30,7 @@ const ScreenContainer = styled.div`
 const StyledScreen = styled.div`
   margin: 1rem;
   @media ${props => props.theme.device.xlarge} {
-    min-width: 1200px;
+    width: 800px;
     margin: 1rem 0;
   }
 `

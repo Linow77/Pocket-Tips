@@ -11,9 +11,6 @@ const NavBar = () => {
       <Logo type='Header' src={ImageLogo} clickable={true}></Logo>
       <LinkContainer>
         <MyLink type='NavBar' to='/'>
-          Home
-        </MyLink>
-        <MyLink type='NavBar' to='/installation'>
           Installation
         </MyLink>
         <MyLink type='NavBar' to='/basics'>
@@ -21,6 +18,9 @@ const NavBar = () => {
         </MyLink>
         <MyLink type='NavBar' to='/nodejs'>
           NodeJS
+        </MyLink>
+        <MyLink type='NavBar' to='/python'>
+          Python
         </MyLink>
       </LinkContainer>
     </StyledNav>
